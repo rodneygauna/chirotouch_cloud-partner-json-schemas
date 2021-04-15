@@ -1,0 +1,145 @@
+{
+    "practice": [
+        {
+            "id": "00cf607c-0447-44c3-af9f-3bdc2ed63db4",
+            "clientId": "CTC000001",
+            "name": "Back to Basics Chiropractic",
+            "bio": "Located in the heart of San Diego, we pride ourselves on having a laid back, positive atmosphere, so your healing begins the minute you walk in the door. Whether you have severe pain, need a routine adjustment or just want a massage--we’re here for you. At Back to Basics Chiropractic, we believe in tailoring our care to your individual health concerns and we’ll always strive to provide you with the best personalized treatment!",
+            "practiceAddress": {
+                "addressLine1": "123 Main Street",
+                "addressLine2": "Suite 200",
+                "city": "San Diego",
+                "state": "CA",
+                "zipCode": "92121"
+            },
+            "phoneNumber": "5555555555",
+            "email": "office@backtohealth.com",
+            "website": "http://www.backtohealth.com",
+            "timezone": "America/Los_Angeles",
+            "logo": "",
+            "billingInformation": {
+                "primaryTaxonomy": "111N00000X",
+                "organizationNpi": "0123456789",
+                "taxId": "11-1234567",
+                "serviceTypes": [{
+                    "code": 25,
+                    "type": "Restorative"
+                },
+                {
+                    "code": 33,
+                    "type": "Chiropractic"
+                }],
+                "billingAddress": {
+                    "sameAsPracticeAddress": true,
+                    "useToPopulateFl33": true,
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": ""
+                },
+                "payToAddress": {
+                    "sameAsBillingAddress": true,
+                    "useToPopulateFl33": true,
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": ""
+                }
+            }
+        },
+        {
+            "id": "0e6af5fb-d085-44c3-9992-0fec771e76a8",
+            "clientId": "CTC000002",
+            "name": "Advanced Chiropractic",
+            "bio": "Located in the heart of San Diego, we pride ourselves on having a laid back, positive atmosphere, so your healing begins the minute you walk in the door. Whether you have severe pain, need a routine adjustment or just want a massage--we’re here for you. At Advanced Chiropractic, we believe in tailoring our care to your individual health concerns and we’ll always strive to provide you with the best personalized treatment!",
+            "practiceAddress": {
+                "addressLine1": "123 Main Street",
+                "addressLine2": "",
+                "city": "San Diego",
+                "state": "CA",
+                "zipCode": "92121"
+            },
+            "phoneNumber": "5553387755",
+            "email": "hello@advchiro.com",
+            "website": "",
+            "timezone": "America/New_York",
+            "logo": "",
+            "billingInformation": {
+                "primaryTaxonomy": "111N00000X",
+                "organizationNpi": "0123456789",
+                "taxId": "11-1234567",
+                "serviceTypes": [{
+                    "code": 25,
+                    "type": "Restorative"
+                },
+                {
+                    "code": 33,
+                    "type": "Chiropractic"
+                }],
+                "billingAddress": {
+                    "sameAsPracticeAddress": false,
+                    "useToPopulateFl33": false,
+                    "addressLine1": "345 Main Street",
+                    "addressLine2": "",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "zipCode": "92121"
+                },
+                "payToAddress": {
+                    "sameAsBillingAddress": false,
+                    "useToPopulateFl33": true,
+                    "addressLine1": "789 Other Street",
+                    "addressLine2": "Suite 200",
+                    "city": "San Diego",
+                    "state": "CA",
+                    "zipCode": "92227"
+                }
+            }
+        },
+        {
+            "id": "105b070c-3e1a-40bd-aae5-2d543b199f58",
+            "clientId": "CTC000003",
+            "name": "Performance Chiropractic",
+            "bio": "",
+            "practiceAddress": {
+                "addressLine1": "123 Main Street",
+                "addressLine2": "",
+                "city": "San Diego",
+                "state": "CA",
+                "zipCode": "92121-1234"
+            },
+            "phoneNumber": "5555555555",
+            "email": "",
+            "website": "",
+            "timezone": "America/Los_Angeles",
+            "logo": "",
+            "billingInformation": {
+                "primaryTaxonomy": "",
+                "organizationNpi": "",
+                "taxId": "",
+                "serviceTypes": [{
+                }],
+                "billingAddress": {
+                    "sameAsPracticeAddress": true,
+                    "useToPopulateFl33": true,
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": ""
+                },
+                "payToAddress": {
+                    "sameAsBillingAddress": true,
+                    "useToPopulateFl33": true,
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": ""
+                }
+            }
+        }
+    ]
+}

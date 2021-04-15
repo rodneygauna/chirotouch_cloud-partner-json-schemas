@@ -1,0 +1,201 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Practice",
+    "definitions": {
+        "Practice": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "practice": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PracticeElement"
+                    }
+                }
+            },
+            "required": [
+                "practice"
+            ],
+            "title": "Pokedex"
+        },
+        "Practice": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "clientId": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string"
+                },
+                "practiceAddress": {
+                    "$ref": "#/definitions/PracticeAddress"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "website": {
+                    "type": "string",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "timezone": {
+                    "type": "string"
+                },
+                "logo": {
+                    "type": "string",
+                    "media": {
+                        "binaryEncoding": "base64",
+                        "type": "image/png"
+                    }
+                },
+                "billingInformation": {
+                    "$ref": "#/definitions/BillingInformation"
+                }
+            },
+            "required": [
+                "billingInformation",
+                "bio",
+                "clientId",
+                "email",
+                "id",
+                "logo",
+                "name",
+                "phoneNumber",
+                "practiceAddress",
+                "timezone",
+                "website"
+            ],
+            "title": "Practice"
+        },
+        "BillingInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "primaryTaxonomy": {
+                    "type": "string"
+                },
+                "organizationNpi": {
+                    "type": "string"
+                },
+                "taxId": {
+                    "type": "string"
+                },
+                "serviceTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceType"
+                    }
+                },
+                "billingAddress": {
+                    "$ref": "#/definitions/Address"
+                },
+                "payToAddress": {
+                    "$ref": "#/definitions/Address"
+                }
+            },
+            "required": [
+                "billingAddress",
+                "organizationNpi",
+                "payToAddress",
+                "primaryTaxonomy",
+                "serviceTypes",
+                "taxId"
+            ],
+            "title": "BillingInformation"
+        },
+        "Address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sameAsPracticeAddress": {
+                    "type": "boolean"
+                },
+                "useToPopulateFl33": {
+                    "type": "boolean"
+                },
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                },
+                "sameAsBillingAddress": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "city",
+                "state",
+                "useToPopulateFl33",
+                "zipCode"
+            ],
+            "title": "Address"
+        },
+        "ServiceType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "ServiceType"
+        },
+        "PracticeAddress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "city",
+                "state",
+                "zipCode"
+            ],
+            "title": "PracticeAddress"
+        }
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "patientInsurance": 
+        {
+            "patientId": "026d4d1a-a45a-41a2-98a1-9ed94ea6293c",
+            "insurance": [
+                {
+                    "id": "",
+                    "status": "",
+                    "policy": {
+                        "planInformation": {
+                            "setAs": "primary",
+                            "payer": {
+                                "id": "",
+                                "alias": "",
+                                "name": "",
+                                "status": "active",
+                                "payerId": "",
+                                "attentionLine": "",
+                                "financialClassification": "",
+                                "contactName": "",
+                                "phoneNumber": "",
+                                "phoneExtension": "",
+                                "faxNumber": "",
+                                "website": "",
+                                "addressLine1": "",
+                                "addressLine2": "",
+                                "city": "",
+                                "state": "",
+                                "zipCode": ""
+                            },
+                            "groupOrPlanName": "",
+                            "type": "",
+                            "groupOrPlanId": ""
+                            }
+                        },
+                        "eligibility": {
+                            "startDate": "",
+                            "termDate": "",
+                            "contactName": "",
+                            "phoneNumber": "",
+                            "phoneExtension": "",
+                            "website": ""
+                        },
+                        "policyholder": {
+                            "id": "",
+                            "firstName": "",
+                            "lastName": "",
+                            "middleName": "",
+                            "suffix": "",
+                            "dateOfBirth": "",
+                            "sex": "",
+                            "insuredIdOrPolicyNumber": "",
+                            "policyholderRelationToPatient": "spouse",
+                            "subscriberId": "",
+                            "addressLine1": "",
+                            "addressLine2": "",
+                            "city": "",
+                            "state": "",
+                            "zipCode": "",
+                            "phoneNumber": ""
+                        }
+                    },
+                    "coverage": {
+                        "copays": [{
+                            "coverageLevels": "",
+                            "serviceTypes": [{
+                                "code": 25,
+                                "type": "Restorative"
+                            },
+                            {
+                                "code": 33,
+                                "type": "Chiropractic"
+                            }],
+                            "inNetwork": "",
+                            "outOfNetwork": "",
+                            "collectForAppointmentTypes": [{
+                                "id": "",
+                                "name": ""
+                            },
+                            {
+                                "id": "",
+                                "name": ""
+                            },
+                            {
+                                "id": "",
+                                "name": ""
+                            }]
+                        },
+                        {
+                            "coverageLevels": "",
+                            "serviceTypes": [{
+                                "code": 25,
+                                "type": "Restorative"
+                            },
+                            {
+                                "code": 33,
+                                "type": "Chiropractic"
+                            }],
+                            "inNetwork": "",
+                            "outOfNetwork": "",
+                            "collectForAppointmentTypes": [{
+                                "id": "",
+                                "name": ""
+                            },
+                            {
+                                "id": "",
+                                "name": ""
+                            },
+                            {
+                                "id": "",
+                                "name": ""
+                            }]
+                        }],
+                        "coinsurance": [{
+                            "coverageLevels": "",
+                            "serviceTypes": [{
+                                "code": 25,
+                                "type": "Restorative"
+                            },
+                            {
+                                "code": 33,
+                                "type": "Chiropractic"
+                            }],
+                            "inNetworkPatientPercentage": "",
+                            "outOfNetworkPatientPercentage": ""
+                        },
+                        {
+                            "coverageLevels": "",
+                            "serviceTypes": [{
+                                "code": 25,
+                                "type": "Restorative"
+                            },
+                            {
+                                "code": 33,
+                                "type": "Chiropractic"
+                            }],
+                            "inNetworkPatientPercentage": "",
+                            "outOfNetworkPatientPercentage": ""
+                        }],
+                        "deductibles": [{
+                            
+                        },
+                        {
+
+                        }],
+                        "maxOutOfPocket": [{
+                            
+                        },
+                        {
+
+                        }],
+                        "coveredServices": [{
+                            
+                        },
+                        {
+
+                        }],
+                        "nonCoveredServices": [{
+                            
+                        },
+                        {
+
+                        }]
+                }
+            }]
+        }
+}

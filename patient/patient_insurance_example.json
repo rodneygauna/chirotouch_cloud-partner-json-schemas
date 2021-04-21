@@ -2,36 +2,17 @@
     "patientInsurance": 
         {
             "patientId": "026d4d1a-a45a-41a2-98a1-9ed94ea6293c",
-            "insurance": [
-                {
+            "practiceId": "00cf607c-0447-44c3-af9f-3bdc2ed63db4",
+            "insurance": [{
                     "id": "",
                     "status": "",
                     "policy": {
                         "planInformation": {
                             "setAs": "primary",
-                            "payer": {
-                                "id": "",
-                                "alias": "",
-                                "name": "",
-                                "status": "active",
-                                "payerId": "",
-                                "attentionLine": "",
-                                "financialClassification": "",
-                                "contactName": "",
-                                "phoneNumber": "",
-                                "phoneExtension": "",
-                                "faxNumber": "",
-                                "website": "",
-                                "addressLine1": "",
-                                "addressLine2": "",
-                                "city": "",
-                                "state": "",
-                                "zipCode": ""
-                            },
+                            "payerId": "",
                             "groupOrPlanName": "",
                             "type": "",
                             "groupOrPlanId": ""
-                            }
                         },
                         "eligibility": {
                             "startDate": "",
@@ -161,7 +142,7 @@
                         {
 
                         }]
-                }
+                    }
             }]
         }
 }

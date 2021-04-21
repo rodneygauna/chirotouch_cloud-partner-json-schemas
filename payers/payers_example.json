@@ -1,0 +1,262 @@
+{
+    "payer": [{
+        "id": "",
+        "practiceId": "",
+        "payerProfile": {
+            "alias": "",
+            "name": "",
+            "status": "active",
+            "attentionLine": "",
+            "financialClassification": "",
+            "contactName": "",
+            "phoneNumber": "",
+            "phoneExtension": "",
+            "faxNumber": "",
+            "website": "",
+            "addressLine1": "",
+            "addressLine2": "",
+            "city": "",
+            "state": "",
+            "zipCode": "",
+            "notes": "",
+            "agreementDetails": {
+                "feeScheduleId": ""
+            }
+        },
+        "claimSubmission": {
+            "defaults": {
+                "claimsFilingIndicatorFL1": "",
+                "providerSignatureFL31": "",
+                "billingProviderAddress": {
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": ""
+                },
+                "chartNotesRequired": true,
+                "spinalManipulationInformationRequired": true,
+                "priorAuthorizationRequired": true
+            },
+            "submissionMethods": {
+                "asPrimaryPayer": "paperClaims",
+                "asSecondaryPayer": "noClaims",
+                "timelyFiling": 180
+            },
+            "optionalPayerSpecificFormValues": {
+                "additionalClaimInformationFL19": [{
+                    "code": "",
+                    "description": "",
+                    "additionalClaimInformationNoteFL19": ""
+                },
+                {
+                    "code": "",
+                    "description": "",
+                    "additionalClaimInformationNoteFL19": ""
+                }]
+            },
+            "optionalProviderSpecificFormValues": [{
+                "userId": "",
+                "renderingProviderOtherIdFL24IJ": {
+                    "code": "",
+                    "id": ""
+                },
+                "taxIdFL25": {
+                    "type": "",
+                    "id": ""
+                },
+                "serviceFacilityLocationInformationFL32": {
+                    "facilityName": "",
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": "",
+                    "phoneNumber": ""
+                },
+                "serviceFacilityNpiNumberFL32": {
+                    "serviceFacilityNpiNumberFL32a": "",
+                    "serviceFacilityOtherIdQualifier": {
+                        "qualifier": "",
+                        "id": ""
+                    },
+                    "billingProviderAddress": {
+                        "facilityName": "",
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "state": "",
+                        "zipCode": "",
+                        "phoneNumber": ""
+                    }
+                }
+            },
+            {
+                "userId": "",
+                "renderingProviderOtherIdFL24IJ": {
+                    "code": "",
+                    "id": ""
+                },
+                "taxIdFL25": {
+                    "type": "",
+                    "id": ""
+                },
+                "serviceFacilityLocationInformationFL32": {
+                    "facilityName": "",
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": "",
+                    "phoneNumber": ""
+                },
+                "serviceFacilityNpiNumberFL32": {
+                    "serviceFacilityNpiNumberFL32a": "",
+                    "serviceFacilityOtherIdQualifier": {
+                        "qualifier": "",
+                        "id": ""
+                    },
+                    "billingProviderAddress": {
+                        "facilityName": "",
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "state": "",
+                        "zipCode": "",
+                        "phoneNumber": ""
+                    }
+                }
+            }]
+        }
+    },
+    {
+        "id": "",
+        "practiceId": "",
+        "payerProfile": {
+            "alias": "",
+            "name": "",
+            "status": "active",
+            "attentionLine": "",
+            "financialClassification": "",
+            "contactName": "",
+            "phoneNumber": "",
+            "phoneExtension": "",
+            "faxNumber": "",
+            "website": "",
+            "addressLine1": "",
+            "addressLine2": "",
+            "city": "",
+            "state": "",
+            "zipCode": "",
+            "notes": "",
+            "agreementDetails": {
+                "feeScheduleId": ""
+            }
+        },
+        "claimSubmission": {
+            "defaults": {
+                "claimsFilingIndicatorFL1": "",
+                "providerSignatureFL31": "",
+                "billingProviderAddress": {
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": ""
+                },
+                "chartNotesRequired": true,
+                "spinalManipulationInformationRequired": true,
+                "priorAuthorizationRequired": true
+            },
+            "submissionMethods": {
+                "asPrimaryPayer": "paperClaims",
+                "asSecondaryPayer": "noClaims",
+                "timelyFiling": 180
+            },
+            "optionalPayerSpecificFormValues": {
+                "additionalClaimInformationFL19": [{
+                    "code": "",
+                    "description": "",
+                    "additionalClaimInformationNoteFL19": ""
+                },
+                {
+                    "code": "",
+                    "description": "",
+                    "additionalClaimInformationNoteFL19": ""
+                }]
+            },
+            "optionalProviderSpecificFormValues": [{
+                "userId": "",
+                "renderingProviderOtherIdFL24IJ": {
+                    "code": "",
+                    "id": ""
+                },
+                "taxIdFL25": {
+                    "type": "",
+                    "id": ""
+                },
+                "serviceFacilityLocationInformationFL32": {
+                    "facilityName": "",
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": "",
+                    "phoneNumber": ""
+                },
+                "serviceFacilityNpiNumberFL32": {
+                    "serviceFacilityNpiNumberFL32a": "",
+                    "serviceFacilityOtherIdQualifier": {
+                        "qualifier": "",
+                        "id": ""
+                    },
+                    "billingProviderAddress": {
+                        "facilityName": "",
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "state": "",
+                        "zipCode": "",
+                        "phoneNumber": ""
+                    }
+                }
+            },
+            {
+                "userId": "",
+                "renderingProviderOtherIdFL24IJ": {
+                    "code": "",
+                    "id": ""
+                },
+                "taxIdFL25": {
+                    "type": "",
+                    "id": ""
+                },
+                "serviceFacilityLocationInformationFL32": {
+                    "facilityName": "",
+                    "addressLine1": "",
+                    "addressLine2": "",
+                    "city": "",
+                    "state": "",
+                    "zipCode": "",
+                    "phoneNumber": ""
+                },
+                "serviceFacilityNpiNumberFL32": {
+                    "serviceFacilityNpiNumberFL32a": "",
+                    "serviceFacilityOtherIdQualifier": {
+                        "qualifier": "",
+                        "id": ""
+                    },
+                    "billingProviderAddress": {
+                        "facilityName": "",
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "state": "",
+                        "zipCode": "",
+                        "phoneNumber": ""
+                    }
+                }
+            }]
+        }
+    }]
+}

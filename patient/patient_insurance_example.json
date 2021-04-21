@@ -1,9 +1,171 @@
 {
-    "patientInsurance": {
+    "patientInsurance":[{
         "patientId": "026d4d1a-a45a-41a2-98a1-9ed94ea6293c",
         "practiceId": "00cf607c-0447-44c3-af9f-3bdc2ed63db4",
-        "insurance": {
+        "insurance": [{
+            "id": "",
+            "status": "active",
+            "notes": "",
+            "policy": {
+                "planInformation": {
+                    "setAs": "primary",
+                    "payerId": "",
+                    "planName": "",
+                    "type": "",
+                    "planIdOrGroupNumber": ""
+                },
+                "eligiblity": {
+                    "startDate": "",
+                    "termDate": "",
+                    "contactName": "",
+                    "contactPhoneNumber": "",
+                    "contactPhoneNumberExtension": "",
+                    "contactWebsite": ""
+                },
+                "policyholder": {
+                    "relationToPatient": "",
+                    "firstName": "",
+                    "middleName": "",
+                    "lastName": "",
+                    "suffix": "",
+                    "dateOfBirth": "",
+                    "sex": "",
+                    "insuredIdOrPolicyNumber": "",
+                    "subscriberId": "",
+                    "policyholderContact": {
+                        "addressLine1": "",
+                        "addressLine2": "",
+                        "city": "",
+                        "state": "",
+                        "zipCode": "",
+                        "phoneNumber": ""
+                    }
+                }
+            },
+            "coverage": {
+                "copays": [{
+                    "coverageLevel": "",
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "inNetwork": "",
+                    "outOfNetwork": "",
+                    "collectForAppointmentTypes": [{
+                        "appointmentId": ""
+                    },
+                    {
+                        "appointmentId": ""
+                    }]
+                },
+                {
+                    "coverageLevel": "",
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "inNetwork": "",
+                    "outOfNetwork": "",
+                    "collectForAppointmentTypes": [{
+                        "appointmentId": ""
+                    },
+                    {
+                        "appointmentId": ""
+                    }]
+                }],
+                "coinsurance": [{
+                    "coverageLevel": "",
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "inNetworkPatientPercentage": 0,
+                    "outOfNetworkPatientPercentage": 0
+                },
+                {
+                    "coverageLevel": "",
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "inNetworkPatientPercentage": 0,
+                    "outOfNetworkPatientPercentage": 0
+                }],
+                "deductibles": [{
+                    "coverageLevel": "",
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "inNetworkAmount": 0.00,
+                    "inNetworkRemaining": 0.00,
+                    "inNetowrkDeductibleMet": true,
+                    "outNetworkAmount": 0.00,
+                    "outNetworkRemaining": 0.00,
+                    "outNetowrkDeductibleMet": true
+                },
+                {
+                    "coverageLevel": "",
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "inNetworkAmount": 0.00,
+                    "inNetworkRemaining": 0.00,
+                    "inNetowrkDeductibleMet": true,
+                    "outNetworkAmount": 0.00,
+                    "outNetworkRemaining": 0.00,
+                    "outNetowrkDeductibleMet": true
+                }],
+                "maxOutOfPocket": [{
 
-        }
-    }
+                },
+                {
+                    
+                }],
+                "coveredServices": [{
+
+                },
+                {
+                    
+                }],
+                "nonCoveredServices": [{
+
+                },
+                {
+                    
+                }]
+            }
+        },
+        {
+
+        }]
+    },
+    {
+
+    }]
 }

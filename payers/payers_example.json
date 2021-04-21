@@ -41,6 +41,7 @@
             "submissionMethods": {
                 "asPrimaryPayer": "paperClaims",
                 "asSecondaryPayer": "noClaims",
+                "payerSubmitId": "",
                 "timelyFiling": 180
             },
             "optionalPayerSpecificFormValues": {
@@ -171,6 +172,7 @@
             "submissionMethods": {
                 "asPrimaryPayer": "paperClaims",
                 "asSecondaryPayer": "noClaims",
+                "payerSubmitId": "",
                 "timelyFiling": 180
             },
             "optionalPayerSpecificFormValues": {

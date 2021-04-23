@@ -49,7 +49,11 @@
                     "type": "string"
                 },
                 "profilePhoto": {
-                    "type": "string"
+                    "type": "string",
+                    "media": {
+                        "binaryEncoding": "base64",
+                        "type": "image/png"
+                    }
                 },
                 "additionalInformation": {
                     "$ref": "#/definitions/AdditionalInformation"

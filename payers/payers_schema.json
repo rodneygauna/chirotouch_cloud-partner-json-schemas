@@ -1,0 +1,427 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Payers",
+    "definitions": {
+        "Payers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "payer": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Payer"
+                    }
+                }
+            },
+            "required": [
+                "payer"
+            ],
+            "title": "Payers"
+        },
+        "Payer": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "practiceId": {
+                    "type": "string"
+                },
+                "payerProfile": {
+                    "$ref": "#/definitions/PayerProfile"
+                },
+                "claimSubmission": {
+                    "$ref": "#/definitions/ClaimSubmission"
+                }
+            },
+            "required": [
+                "claimSubmission",
+                "id",
+                "payerProfile",
+                "practiceId"
+            ],
+            "title": "Payer"
+        },
+        "ClaimSubmission": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "defaults": {
+                    "$ref": "#/definitions/Defaults"
+                },
+                "submissionMethods": {
+                    "$ref": "#/definitions/SubmissionMethods"
+                },
+                "optionalPayerSpecificFormValues": {
+                    "$ref": "#/definitions/OptionalPayerSpecificFormValues"
+                },
+                "optionalProviderSpecificFormValues": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OptionalProviderSpecificFormValue"
+                    }
+                }
+            },
+            "required": [
+                "defaults",
+                "optionalPayerSpecificFormValues",
+                "optionalProviderSpecificFormValues",
+                "submissionMethods"
+            ],
+            "title": "ClaimSubmission"
+        },
+        "Defaults": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "claimsFilingIndicatorFL1": {
+                    "type": "string"
+                },
+                "providerSignatureFL31": {
+                    "type": "string"
+                },
+                "billingProviderAddress": {
+                    "$ref": "#/definitions/BillingProviderAddress"
+                },
+                "chartNotesRequired": {
+                    "type": "boolean"
+                },
+                "spinalManipulationInformationRequired": {
+                    "type": "boolean"
+                },
+                "priorAuthorizationRequired": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "billingProviderAddress",
+                "chartNotesRequired",
+                "claimsFilingIndicatorFL1",
+                "priorAuthorizationRequired",
+                "providerSignatureFL31",
+                "spinalManipulationInformationRequired"
+            ],
+            "title": "Defaults"
+        },
+        "BillingProviderAddress": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "city",
+                "state",
+                "zipCode"
+            ],
+            "title": "BillingProviderAddress"
+        },
+        "OptionalPayerSpecificFormValues": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "additionalClaimInformationFL19": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AdditionalClaimInformationFL19"
+                    }
+                }
+            },
+            "required": [
+                "additionalClaimInformationFL19"
+            ],
+            "title": "OptionalPayerSpecificFormValues"
+        },
+        "AdditionalClaimInformationFL19": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "additionalClaimInformationNoteFL19": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "additionalClaimInformationNoteFL19",
+                "code",
+                "description"
+            ],
+            "title": "AdditionalClaimInformationFL19"
+        },
+        "OptionalProviderSpecificFormValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "userId": {
+                    "type": "string"
+                },
+                "renderingProviderOtherIdFL24IJ": {
+                    "$ref": "#/definitions/RenderingProviderOtherIDFL24IJ"
+                },
+                "taxIdFL25": {
+                    "$ref": "#/definitions/TaxIDFL25"
+                },
+                "serviceFacilityLocationInformationFL32": {
+                    "$ref": "#/definitions/ServiceFacilityLocationInformationFl32"
+                },
+                "serviceFacilityNpiNumberFL32": {
+                    "$ref": "#/definitions/ServiceFacilityNpiNumberFL32"
+                }
+            },
+            "required": [
+                "renderingProviderOtherIdFL24IJ",
+                "serviceFacilityLocationInformationFL32",
+                "serviceFacilityNpiNumberFL32",
+                "taxIdFL25",
+                "userId"
+            ],
+            "title": "OptionalProviderSpecificFormValue"
+        },
+        "RenderingProviderOtherIDFL24IJ": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "id"
+            ],
+            "title": "RenderingProviderOtherIDFL24IJ"
+        },
+        "ServiceFacilityLocationInformationFl32": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "facilityName": {
+                    "type": "string"
+                },
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "city",
+                "facilityName",
+                "phoneNumber",
+                "state",
+                "zipCode"
+            ],
+            "title": "ServiceFacilityLocationInformationFl32"
+        },
+        "ServiceFacilityNpiNumberFL32": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "serviceFacilityNpiNumberFL32a": {
+                    "type": "string"
+                },
+                "serviceFacilityOtherIdQualifier": {
+                    "$ref": "#/definitions/ServiceFacilityOtherIDQualifier"
+                },
+                "billingProviderAddress": {
+                    "$ref": "#/definitions/ServiceFacilityLocationInformationFl32"
+                }
+            },
+            "required": [
+                "billingProviderAddress",
+                "serviceFacilityNpiNumberFL32a",
+                "serviceFacilityOtherIdQualifier"
+            ],
+            "title": "ServiceFacilityNpiNumberFL32"
+        },
+        "ServiceFacilityOtherIDQualifier": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "qualifier": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "qualifier"
+            ],
+            "title": "ServiceFacilityOtherIDQualifier"
+        },
+        "TaxIDFL25": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "title": "TaxIDFL25"
+        },
+        "SubmissionMethods": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "asPrimaryPayer": {
+                    "type": "string"
+                },
+                "asSecondaryPayer": {
+                    "type": "string"
+                },
+                "payerSubmitId": {
+                    "type": "string"
+                },
+                "timelyFiling": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "asPrimaryPayer",
+                "asSecondaryPayer",
+                "payerSubmitId",
+                "timelyFiling"
+            ],
+            "title": "SubmissionMethods"
+        },
+        "PayerProfile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "alias": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "attentionLine": {
+                    "type": "string"
+                },
+                "financialClassification": {
+                    "type": "string"
+                },
+                "contactName": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "phoneExtension": {
+                    "type": "string"
+                },
+                "faxNumber": {
+                    "type": "string"
+                },
+                "website": {
+                    "type": "string"
+                },
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "agreementDetails": {
+                    "$ref": "#/definitions/AgreementDetails"
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "agreementDetails",
+                "alias",
+                "attentionLine",
+                "city",
+                "contactName",
+                "faxNumber",
+                "financialClassification",
+                "name",
+                "notes",
+                "phoneExtension",
+                "phoneNumber",
+                "state",
+                "status",
+                "website",
+                "zipCode"
+            ],
+            "title": "PayerProfile"
+        },
+        "AgreementDetails": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "feeScheduleId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "feeScheduleId"
+            ],
+            "title": "AgreementDetails"
+        }
+    }
+}

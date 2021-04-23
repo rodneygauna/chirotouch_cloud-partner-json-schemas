@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/AppointmentTypes",
+    "definitions": {
+        "AppointmentTypes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "appointmentTypes": {
+                    "$ref": "#/definitions/AppointmentTypesClass"
+                }
+            },
+            "required": [
+                "appointmentTypes"
+            ],
+            "title": "AppointmentTypes"
+        },
+        "AppointmentTypesClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "practiceId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "appoitmentType": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AppoitmentType"
+                    }
+                }
+            },
+            "required": [
+                "appoitmentType",
+                "practiceId"
+            ],
+            "title": "AppointmentTypesClass"
+        },
+        "AppoitmentType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "duration": {
+                    "$ref": "#/definitions/Duration"
+                },
+                "allowOnlineBooking": {
+                    "type": "boolean"
+                },
+                "status": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "allowOnlineBooking",
+                "description",
+                "duration",
+                "id",
+                "name",
+                "status"
+            ],
+            "title": "AppoitmentType"
+        },
+        "Duration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "hours": {
+                    "type": "integer"
+                },
+                "minutes": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "hours",
+                "minutes"
+            ],
+            "title": "Duration"
+        }
+    }
+}

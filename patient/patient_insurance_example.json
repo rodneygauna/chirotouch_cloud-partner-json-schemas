@@ -142,22 +142,80 @@
                     "outNetowrkDeductibleMet": true
                 }],
                 "maxOutOfPocket": [{
-
+                    "coverageLevel": "",
+                    "inNetworkAmount": "",
+                    "inNetworkRemain": "",
+                    "inNetworkAsOfDate": "",
+                    "inNetworkMaxOutOfPocket": false,
+                    "outNetworkAmount": "",
+                    "outNetworkRemain": "",
+                    "outNetworkAsOfDate": "",
+                    "outNetworkMaxOutOfPocket": false
                 },
                 {
-                    
+                    "coverageLevel": "",
+                    "inNetworkAmount": "",
+                    "inNetworkRemain": "",
+                    "inNetworkAsOfDate": "",
+                    "inNetworkMaxOutOfPocket": false,
+                    "outNetworkAmount": "",
+                    "outNetworkRemain": "",
+                    "outNetworkAsOfDate": "",
+                    "outNetworkMaxOutOfPocket": false
                 }],
                 "coveredServices": [{
-
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }],
+                    "preAuthorizationRequired": false,
+                    "quantityType": "",
+                    "quantity": "",
+                    "quantityTerm": "",
+                    "remaining": "",
+                    "remainingAsOfDate": "",
+                    "inNetworkCopayAmount": "",
+                    "outOfNetworkCopayAmount": "",
+                    "inNetworkCoinsurancePercentage": "",
+                    "outOfNetworkCoinsurancePercentage": ""
                 },
                 {
-                    
+                    "procedureCode": "",
+                    "modifier1": "",
+                    "modifier2": "",
+                    "modifier3": "",
+                    "modifier4": "",
+                    "preAuthorizationRequired": false,
+                    "quantityType": "",
+                    "quantity": "",
+                    "quantityTerm": "",
+                    "remaining": "",
+                    "remainingAsOfDate": "",
+                    "inNetworkCopayAmount": "",
+                    "outOfNetworkCopayAmount": "",
+                    "inNetworkCoinsurancePercentage": "",
+                    "outOfNetworkCoinsurancePercentage": ""
                 }],
                 "nonCoveredServices": [{
-
+                    "serviceTypes": [{
+                        "code": 25,
+                        "type": "Restorative"
+                    },
+                    {
+                        "code": 33,
+                        "type": "Chiropractice"
+                    }]
                 },
                 {
-                    
+                    "procedureCode": "",
+                    "modifier1": "",
+                    "modifier2": "",
+                    "modifier3": "",
+                    "modifier4": ""
                 }]
             }
         },

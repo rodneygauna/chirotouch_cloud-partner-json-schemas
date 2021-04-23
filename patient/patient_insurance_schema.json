@@ -1,0 +1,572 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/PatientInsurance",
+    "definitions": {
+        "PatientInsurance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "patientInsurance": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PatientInsuranceElement"
+                    }
+                }
+            },
+            "required": [
+                "patientInsurance"
+            ],
+            "title": "PatientInsurance"
+        },
+        "PatientInsuranceElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "patientId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "practiceId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "insurance": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Insurance"
+                    }
+                }
+            },
+            "required": [],
+            "title": "PatientInsuranceElement"
+        },
+        "Insurance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "policy": {
+                    "$ref": "#/definitions/Policy"
+                },
+                "coverage": {
+                    "$ref": "#/definitions/Coverage"
+                }
+            },
+            "required": [],
+            "title": "Insurance"
+        },
+        "Coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "copays": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Copay"
+                    }
+                },
+                "coinsurance": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Coinsurance"
+                    }
+                },
+                "deductibles": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Deductible"
+                    }
+                },
+                "maxOutOfPocket": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MaxOutOfPocket"
+                    }
+                },
+                "coveredServices": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CoveredService"
+                    }
+                },
+                "nonCoveredServices": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NonCoveredService"
+                    }
+                }
+            },
+            "required": [
+                "coinsurance",
+                "copays",
+                "coveredServices",
+                "deductibles",
+                "maxOutOfPocket",
+                "nonCoveredServices"
+            ],
+            "title": "Coverage"
+        },
+        "Coinsurance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "coverageLevel": {
+                    "type": "string"
+                },
+                "serviceTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceType"
+                    }
+                },
+                "inNetworkPatientPercentage": {
+                    "type": "integer"
+                },
+                "outOfNetworkPatientPercentage": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "coverageLevel",
+                "inNetworkPatientPercentage",
+                "outOfNetworkPatientPercentage",
+                "serviceTypes"
+            ],
+            "title": "Coinsurance"
+        },
+        "ServiceType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "type": {
+                    "$ref": "#/definitions/Type"
+                }
+            },
+            "required": [
+                "code",
+                "type"
+            ],
+            "title": "ServiceType"
+        },
+        "Copay": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "coverageLevel": {
+                    "type": "string"
+                },
+                "serviceTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceType"
+                    }
+                },
+                "inNetwork": {
+                    "type": "string"
+                },
+                "outOfNetwork": {
+                    "type": "string"
+                },
+                "collectForAppointmentTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/CollectForAppointmentType"
+                    }
+                }
+            },
+            "required": [
+                "collectForAppointmentTypes",
+                "coverageLevel",
+                "inNetwork",
+                "outOfNetwork",
+                "serviceTypes"
+            ],
+            "title": "Copay"
+        },
+        "CollectForAppointmentType": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "appointmentId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "appointmentId"
+            ],
+            "title": "CollectForAppointmentType"
+        },
+        "CoveredService": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "serviceTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceType"
+                    }
+                },
+                "preAuthorizationRequired": {
+                    "type": "boolean"
+                },
+                "quantityType": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "type": "string"
+                },
+                "quantityTerm": {
+                    "type": "string"
+                },
+                "remaining": {
+                    "type": "string"
+                },
+                "remainingAsOfDate": {
+                    "type": "string"
+                },
+                "inNetworkCopayAmount": {
+                    "type": "string"
+                },
+                "outOfNetworkCopayAmount": {
+                    "type": "string"
+                },
+                "inNetworkCoinsurancePercentage": {
+                    "type": "string"
+                },
+                "outOfNetworkCoinsurancePercentage": {
+                    "type": "string"
+                },
+                "procedureCode": {
+                    "type": "string"
+                },
+                "modifier1": {
+                    "type": "string"
+                },
+                "modifier2": {
+                    "type": "string"
+                },
+                "modifier3": {
+                    "type": "string"
+                },
+                "modifier4": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "inNetworkCoinsurancePercentage",
+                "inNetworkCopayAmount",
+                "outOfNetworkCoinsurancePercentage",
+                "outOfNetworkCopayAmount",
+                "preAuthorizationRequired",
+                "quantity",
+                "quantityTerm",
+                "quantityType",
+                "remaining",
+                "remainingAsOfDate"
+            ],
+            "title": "CoveredService"
+        },
+        "Deductible": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "coverageLevel": {
+                    "type": "string"
+                },
+                "serviceTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceType"
+                    }
+                },
+                "inNetworkAmount": {
+                    "type": "integer"
+                },
+                "inNetworkRemaining": {
+                    "type": "integer"
+                },
+                "inNetowrkDeductibleMet": {
+                    "type": "boolean"
+                },
+                "outNetworkAmount": {
+                    "type": "integer"
+                },
+                "outNetworkRemaining": {
+                    "type": "integer"
+                },
+                "outNetowrkDeductibleMet": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "coverageLevel",
+                "inNetowrkDeductibleMet",
+                "inNetworkAmount",
+                "inNetworkRemaining",
+                "outNetowrkDeductibleMet",
+                "outNetworkAmount",
+                "outNetworkRemaining",
+                "serviceTypes"
+            ],
+            "title": "Deductible"
+        },
+        "MaxOutOfPocket": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "coverageLevel": {
+                    "type": "string"
+                },
+                "inNetworkAmount": {
+                    "type": "string"
+                },
+                "inNetworkRemain": {
+                    "type": "string"
+                },
+                "inNetworkAsOfDate": {
+                    "type": "string"
+                },
+                "inNetworkMaxOutOfPocket": {
+                    "type": "boolean"
+                },
+                "outNetworkAmount": {
+                    "type": "string"
+                },
+                "outNetworkRemain": {
+                    "type": "string"
+                },
+                "outNetworkAsOfDate": {
+                    "type": "string"
+                },
+                "outNetworkMaxOutOfPocket": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "coverageLevel",
+                "inNetworkAmount",
+                "inNetworkAsOfDate",
+                "inNetworkMaxOutOfPocket",
+                "inNetworkRemain",
+                "outNetworkAmount",
+                "outNetworkAsOfDate",
+                "outNetworkMaxOutOfPocket",
+                "outNetworkRemain"
+            ],
+            "title": "MaxOutOfPocket"
+        },
+        "NonCoveredService": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "serviceTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ServiceType"
+                    }
+                },
+                "procedureCode": {
+                    "type": "string"
+                },
+                "modifier1": {
+                    "type": "string"
+                },
+                "modifier2": {
+                    "type": "string"
+                },
+                "modifier3": {
+                    "type": "string"
+                },
+                "modifier4": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "NonCoveredService"
+        },
+        "Policy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "planInformation": {
+                    "$ref": "#/definitions/PlanInformation"
+                },
+                "eligiblity": {
+                    "$ref": "#/definitions/Eligiblity"
+                },
+                "policyholder": {
+                    "$ref": "#/definitions/Policyholder"
+                }
+            },
+            "required": [
+                "eligiblity",
+                "planInformation",
+                "policyholder"
+            ],
+            "title": "Policy"
+        },
+        "Eligiblity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "startDate": {
+                    "type": "string"
+                },
+                "termDate": {
+                    "type": "string"
+                },
+                "contactName": {
+                    "type": "string"
+                },
+                "contactPhoneNumber": {
+                    "type": "string"
+                },
+                "contactPhoneNumberExtension": {
+                    "type": "string"
+                },
+                "contactWebsite": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "contactName",
+                "contactPhoneNumber",
+                "contactPhoneNumberExtension",
+                "contactWebsite",
+                "startDate",
+                "termDate"
+            ],
+            "title": "Eligiblity"
+        },
+        "PlanInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "setAs": {
+                    "type": "string"
+                },
+                "payerId": {
+                    "type": "string"
+                },
+                "planName": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "planIdOrGroupNumber": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "payerId",
+                "planIdOrGroupNumber",
+                "planName",
+                "setAs",
+                "type"
+            ],
+            "title": "PlanInformation"
+        },
+        "Policyholder": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "relationToPatient": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "suffix": {
+                    "type": "string"
+                },
+                "dateOfBirth": {
+                    "type": "string"
+                },
+                "sex": {
+                    "type": "string"
+                },
+                "insuredIdOrPolicyNumber": {
+                    "type": "string"
+                },
+                "subscriberId": {
+                    "type": "string"
+                },
+                "policyholderContact": {
+                    "$ref": "#/definitions/PolicyholderContact"
+                }
+            },
+            "required": [
+                "dateOfBirth",
+                "firstName",
+                "insuredIdOrPolicyNumber",
+                "lastName",
+                "middleName",
+                "policyholderContact",
+                "relationToPatient",
+                "sex",
+                "subscriberId",
+                "suffix"
+            ],
+            "title": "Policyholder"
+        },
+        "PolicyholderContact": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "city",
+                "phoneNumber",
+                "state",
+                "zipCode"
+            ],
+            "title": "PolicyholderContact"
+        },
+        "Type": {
+            "type": "string",
+            "enum": [
+                "Restorative",
+                "Chiropractice"
+            ],
+            "title": "Type"
+        }
+    }
+}

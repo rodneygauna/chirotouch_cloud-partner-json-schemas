@@ -1,0 +1,147 @@
+{
+    "practiceUsers": {
+        "practiceId": "00cf607c-0447-44c3-af9f-3bdc2ed63db4",
+        "user": [{
+            "id": "34f4f21a-644d-4e59-9c9f-ef8813806291",
+            "status": "active",
+            "userType": "provider",
+            "profile": {
+                "firstName": "Patch",
+                "lastName": "Adams",
+                "profilePhoto": "",
+                "additionalInformation": {
+                    "middleName": "Carl",
+                    "preferredName": "Patches",
+                    "suffix": "Sr"
+                },
+                "contactInformation": {
+                    "phoneNumber": [{
+                        "number": "5555555555",
+                        "type": "mobile"
+                    },
+                    {
+                        "number": "5555555554",
+                        "type": "office"
+                    },
+                    {
+                        "number": "5555555553",
+                        "type": "fax"
+                    }],
+                    "emailAddress": "patchadams@chirotouch.com"
+                },
+                "biography": "I'm a funny and amazing doctor. Honk my nose!"
+            },
+            "providerInformation": {
+                "npi":"1111111111",
+                "tax": {
+                    "id": "11-1234567",
+                    "type": "ein"
+                },
+                "primaryTaxonomy": {
+                    "code": "111N00000X",
+                    "description": "Chiropractic"
+                },
+                "licenses": [{
+                    "state": "CA",
+                    "number": "123456"
+                },
+                {
+                    "state": "CA",
+                    "number": "78906"
+                }],
+                "otherIdentifiers": [{
+                    "code": "ZZ",
+                    "description": "Provider Taxonomy",
+                    "identifier": "12345"
+                },
+                {
+                    "code": "SY",
+                    "description": "Social Security Number (The social security number may not be used for Medicare)",
+                    "identifier": "555555555"
+                }]
+            }
+        },
+        {
+            "id": "51e2e700-af3d-4907-8291-a75594e46c5b",
+            "status": "active",
+            "userType": "specialist",
+            "profile": {
+                "firstName": "Amy",
+                "lastName": "Small",
+                "profilePhoto": "",
+                "additionalInformation": {
+                    "middleName": "",
+                    "preferredName": "",
+                    "suffix": ""
+                },
+                "contactInformation": {
+                    "phoneNumber": [{
+                        "number": "",
+                        "type": ""
+                    },
+                    {
+                        "number": "",
+                        "type": ""
+                    },
+                    {
+                        "number": "",
+                        "type": ""
+                    }],
+                    "emailAddress": "amysmall@chirotouch.com"
+                },
+                "biography": ""
+            },
+            "providerInformation": {
+                "npi":"",
+                "tax": {
+                    "id": "",
+                    "type": "ssn"
+                },
+                "primaryTaxonomy": {
+                    "code": "",
+                    "description": ""
+                },
+                "licenses": [{
+                    "state": "",
+                    "number": ""
+                }],
+                "otherIdentifiers": [{
+                    "code": "",
+                    "description": "",
+                    "identifier": ""
+                }]
+            }
+        },
+        {
+            "id": "16563bf2-7a13-450e-9177-c793ecc533f0",
+            "status": "inactive",
+            "userType": "staff",
+            "profile": {
+                "firstName": "Bill",
+                "lastName": "Tedd",
+                "profilePhoto": "",
+                "additionalInformation": {
+                    "middleName": "",
+                    "preferredName": "",
+                    "suffix": ""
+                },
+                "contactInformation": {
+                    "phoneNumber": [{
+                        "number": "",
+                        "type": ""
+                    },
+                    {
+                        "number": "",
+                        "type": ""
+                    },
+                    {
+                        "number": "",
+                        "type": ""
+                    }],
+                    "emailAddress": "billandtedd@chirotouch.com"
+                },
+                "biography": ""
+            }
+        }]
+    }
+}

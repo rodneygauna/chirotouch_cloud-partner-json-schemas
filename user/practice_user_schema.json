@@ -1,0 +1,271 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/PracticeUser",
+    "definitions": {
+        "PracticeUser": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "practiceUsers": {
+                    "$ref": "#/definitions/PracticeUsers"
+                }
+            },
+            "required": [
+                "practiceUsers"
+            ],
+            "title": "PracticeUser"
+        },
+        "PracticeUsers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "practiceId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "user": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/User"
+                    }
+                }
+            },
+            "required": [
+                "practiceId",
+                "user"
+            ],
+            "title": "PracticeUsers"
+        },
+        "User": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "userType": {
+                    "type": "string"
+                },
+                "profile": {
+                    "$ref": "#/definitions/Profile"
+                },
+                "providerInformation": {
+                    "$ref": "#/definitions/ProviderInformation"
+                }
+            },
+            "required": [
+                "id",
+                "profile",
+                "status",
+                "userType"
+            ],
+            "title": "User"
+        },
+        "Profile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "profilePhoto": {
+                    "type": "string",
+                    "media": {
+                        "binaryEncoding": "base64",
+                        "type": "image/png"
+                    }
+                },
+                "additionalInformation": {
+                    "$ref": "#/definitions/AdditionalInformation"
+                },
+                "contactInformation": {
+                    "$ref": "#/definitions/ContactInformation"
+                },
+                "biography": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "additionalInformation",
+                "biography",
+                "contactInformation",
+                "firstName",
+                "lastName",
+                "profilePhoto"
+            ],
+            "title": "Profile"
+        },
+        "AdditionalInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "middleName": {
+                    "type": "string"
+                },
+                "preferredName": {
+                    "type": "string"
+                },
+                "suffix": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "middleName",
+                "preferredName",
+                "suffix"
+            ],
+            "title": "AdditionalInformation"
+        },
+        "ContactInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "phoneNumber": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PhoneNumber"
+                    }
+                },
+                "emailAddress": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "emailAddress",
+                "phoneNumber"
+            ],
+            "title": "ContactInformation"
+        },
+        "PhoneNumber": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "number": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "number",
+                "type"
+            ],
+            "title": "PhoneNumber"
+        },
+        "ProviderInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "npi": {
+                    "type": "string"
+                },
+                "tax": {
+                    "$ref": "#/definitions/Tax"
+                },
+                "primaryTaxonomy": {
+                    "$ref": "#/definitions/PrimaryTaxonomy"
+                },
+                "licenses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/License"
+                    }
+                },
+                "otherIdentifiers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OtherIdentifier"
+                    }
+                }
+            },
+            "required": [
+                "licenses",
+                "npi",
+                "otherIdentifiers",
+                "primaryTaxonomy",
+                "tax"
+            ],
+            "title": "ProviderInformation"
+        },
+        "License": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "state": {
+                    "type": "string"
+                },
+                "number": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "number",
+                "state"
+            ],
+            "title": "License"
+        },
+        "OtherIdentifier": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "identifier": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "description",
+                "identifier"
+            ],
+            "title": "OtherIdentifier"
+        },
+        "PrimaryTaxonomy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "code",
+                "description"
+            ],
+            "title": "PrimaryTaxonomy"
+        },
+        "Tax": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "type"
+            ],
+            "title": "Tax"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "appointmentTypes": {
+        "practiceId": "00cf607c-0447-44c3-af9f-3bdc2ed63db4",
+        "appoitmentType": [{
+            "id": "",
+            "name": "",
+            "description": "",
+            "duration": {
+                "hours": 1,
+                "minutes": 15
+            },
+            "allowOnlineBooking": true,
+            "status": "active"
+        },
+        {
+            "id": "",
+            "name": "",
+            "description": "",
+            "duration": {
+                "hours": 1,
+                "minutes": 15
+            },
+            "allowOnlineBooking": true,
+            "status": "active"
+        }]
+    }
+}

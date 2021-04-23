@@ -1,0 +1,81 @@
+{
+    "patientAppointments": {
+        "practiceId": "00cf607c-0447-44c3-af9f-3bdc2ed63db4",
+        "appointments": [{
+            "patientId": "026d4d1a-a45a-41a2-98a1-9ed94ea6293c",
+            "providerId": "",
+            "appointmentTypeId": "",
+            "appointmentStart": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 19,
+                "minute": 0
+            },
+            "appointmentEnd": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 20,
+                "minute": 0
+            },
+            "bookingType": "staff",
+            "status": "active",
+            "timezone": "America/Los_Angeles",
+            "createAt": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 20,
+                "minute": 0,
+                "userId": ""
+            },
+            "updatedAt": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 20,
+                "minute": 0,
+                "userId": ""
+            }
+        },
+        {
+            "patientId": "026d4d1a-a45a-41a2-98a1-9ed94ea6293c",
+            "providerId": "",
+            "appointmentTypeId": "",
+            "appointmentStart": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 19,
+                "minute": 0
+            },
+            "appointmentEnd": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 20,
+                "minute": 0
+            },
+            "bookingType": "staff",
+            "status": "active",
+            "timezone": "America/Los_Angeles",
+            "createAt": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 20,
+                "minute": 0,
+                "userId": ""
+            },
+            "updatedAt": {
+                "year": 2020,
+                "month": 10,
+                "day": 23,
+                "hour": 20,
+                "minute": 0,
+                "userId": ""
+            }
+        }]
+    }
+}

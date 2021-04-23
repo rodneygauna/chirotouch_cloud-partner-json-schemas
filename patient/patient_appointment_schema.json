@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/PatientAppointments",
+    "definitions": {
+        "PatientAppointments": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "patientAppointments": {
+                    "$ref": "#/definitions/PatientAppointmentsClass"
+                }
+            },
+            "required": [
+                "patientAppointments"
+            ],
+            "title": "PatientAppointments"
+        },
+        "PatientAppointmentsClass": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "practiceId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "appointments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Appointment"
+                    }
+                }
+            },
+            "required": [
+                "appointments",
+                "practiceId"
+            ],
+            "title": "PatientAppointmentsClass"
+        },
+        "Appointment": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "patientId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "providerId": {
+                    "type": "string"
+                },
+                "appointmentTypeId": {
+                    "type": "string"
+                },
+                "appointmentStart": {
+                    "$ref": "#/definitions/AppointmentEnd"
+                },
+                "appointmentEnd": {
+                    "$ref": "#/definitions/AppointmentEnd"
+                },
+                "bookingType": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "timezone": {
+                    "type": "string"
+                },
+                "createAt": {
+                    "$ref": "#/definitions/AppointmentEnd"
+                },
+                "updatedAt": {
+                    "$ref": "#/definitions/AppointmentEnd"
+                }
+            },
+            "required": [
+                "appointmentEnd",
+                "appointmentStart",
+                "appointmentTypeId",
+                "bookingType",
+                "createAt",
+                "patientId",
+                "providerId",
+                "status",
+                "timezone",
+                "updatedAt"
+            ],
+            "title": "Appointment"
+        },
+        "AppointmentEnd": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "year": {
+                    "type": "integer"
+                },
+                "month": {
+                    "type": "integer"
+                },
+                "day": {
+                    "type": "integer"
+                },
+                "hour": {
+                    "type": "integer"
+                },
+                "minute": {
+                    "type": "integer"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "day",
+                "hour",
+                "minute",
+                "month",
+                "year"
+            ],
+            "title": "AppointmentEnd"
+        }
+    }
+}

@@ -1,0 +1,187 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Patient",
+    "definitions": {
+        "Patient": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "patient": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PatientElement"
+                    }
+                }
+            },
+            "required": [
+                "patient"
+            ],
+            "title": "Patient"
+        },
+        "PatientElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "practiceId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "dateOfBirth": {
+                    "type": "string"
+                },
+                "medicalRecordNumber": {
+                    "type": "string"
+                },
+                "sex": {
+                    "type": "string"
+                },
+                "profilePhoto": {
+                    "type": "string"
+                },
+                "additionalInformation": {
+                    "$ref": "#/definitions/AdditionalInformation"
+                },
+                "contactInformation": {
+                    "$ref": "#/definitions/ContactInformation"
+                }
+            },
+            "required": [
+                "additionalInformation",
+                "contactInformation",
+                "dateOfBirth",
+                "firstName",
+                "id",
+                "lastName",
+                "medicalRecordNumber",
+                "practiceId",
+                "profilePhoto",
+                "sex",
+                "status"
+            ],
+            "title": "PatientElement"
+        },
+        "AdditionalInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "middleName": {
+                    "type": "string"
+                },
+                "preferredName": {
+                    "type": "string"
+                },
+                "suffix": {
+                    "type": "string"
+                },
+                "socialSecurityNumber": {
+                    "type": "string"
+                },
+                "relationshipStatus": {
+                    "type": "string"
+                },
+                "employmentStatus": {
+                    "type": "string"
+                },
+                "preferredProvider": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "employmentStatus",
+                "middleName",
+                "preferredName",
+                "preferredProvider",
+                "relationshipStatus",
+                "socialSecurityNumber",
+                "suffix"
+            ],
+            "title": "AdditionalInformation"
+        },
+        "ContactInformation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/PhoneNumber"
+                    }
+                },
+                "email": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Email"
+                    }
+                }
+            },
+            "required": [
+                "addressLine1",
+                "addressLine2",
+                "city",
+                "email",
+                "phoneNumber",
+                "state",
+                "zipCode"
+            ],
+            "title": "ContactInformation"
+        },
+        "Email": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "emailAddress": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "emailAddress"
+            ],
+            "title": "Email"
+        },
+        "PhoneNumber": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "number": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "number",
+                "type"
+            ],
+            "title": "PhoneNumber"
+        }
+    }
+}
